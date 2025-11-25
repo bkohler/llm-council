@@ -8,10 +8,11 @@ load_dotenv()
 # OpenRouter API key
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Council members - list of OpenRouter model identifiers
 COUNCIL_MODELS = [
-    "openrouter::openai/gpt-5.1",
+    "openai::gpt-4o",
     "openrouter::google/gemini-3-pro-preview",
     "deepseek::deepseek-chat",
     "openrouter::x-ai/grok-4",

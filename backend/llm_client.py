@@ -2,11 +2,13 @@
 
 import httpx
 from typing import List, Dict, Any, Optional
-from .config import OPENROUTER_API_KEY, OPENROUTER_API_URL, DEEPSEEK_API_KEY
+from .config import OPENROUTER_API_KEY, OPENROUTER_API_URL, DEEPSEEK_API_KEY, OPENAI_API_KEY
 
 
 # Define Deepseek API URL
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
+# Define OpenAI API URL
+OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 
 # Map providers to their configurations
 PROVIDER_CONFIGS = {
@@ -20,6 +22,12 @@ PROVIDER_CONFIGS = {
         "api_key": DEEPSEEK_API_KEY,
         "api_url": DEEPSEEK_API_URL,
         "model_prefix": "deepseek::",
+        "header_auth_prefix": "Bearer "
+    },
+    "openai": {
+        "api_key": OPENAI_API_KEY,
+        "api_url": OPENAI_API_URL,
+        "model_prefix": "openai::",
         "header_auth_prefix": "Bearer "
     }
     # Add other providers here
